@@ -1,0 +1,6 @@
+[done]* value_ref should not be created from pointer types.
+* improve the member detector macros.
+[done]* improve UA_NATIVE_OBJECT() family of macros.
+[done]* improve UA_NATIVE_ENUM() family of macros.
+[done]* value_ref::cast_to() should behave more like to C/C++ implicit conversion.
+* create a special meta_value for a dynamic type for test and verification purpose.
