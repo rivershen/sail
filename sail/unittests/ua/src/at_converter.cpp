@@ -63,9 +63,9 @@ TYPED_TEST(safe_implicit_value_converter_test, convertible_from_bool){
     EXPECT_TRUE(safe_implicit_value_converter::convert(v, &b));
 
     EXPECT_TRUE(safe_implicit_value_converter::convert(true, &v));
-    EXPECT_EQ(1, v);
+    EXPECT_EQ((TypeParam)1, v);
     EXPECT_TRUE(safe_implicit_value_converter::convert(false, &v));
-    EXPECT_EQ(0, v);
+    EXPECT_EQ((TypeParam)0, v);
 
 
 }
@@ -88,9 +88,9 @@ TYPED_TEST(safe_implicit_value_converter_test, convertible_to_float){
     EXPECT_DOUBLE_EQ(100.0l, d);
 
     EXPECT_TRUE(safe_implicit_value_converter::convert(3.14f, &v));
-    EXPECT_EQ(3, v);
+    EXPECT_EQ((TypeParam)3, v);
     EXPECT_TRUE(safe_implicit_value_converter::convert(1.23l, &v));
-    EXPECT_EQ(1, v);
+    EXPECT_EQ((TypeParam)1, v);
 }
 TEST(safe_implicit_value_converter_tests2, float){
     double d;

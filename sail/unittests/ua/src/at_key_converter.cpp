@@ -67,7 +67,7 @@ TEST_F(key_converter_tests, c_str){
     converter.set(enmpty_str);
     EXPECT_EQ(enmpty_str, converter.get());
     converter.set(L"");
-    EXPECT_EQ(0, ::strlen(converter.get()));
+    EXPECT_EQ(0u, ::strlen(converter.get()));
 
     converter.set(cs);
     EXPECT_EQ(str, converter.get());
@@ -116,7 +116,7 @@ TEST_F(key_converter_tests, c_wstr){
     key_converter<const wchar_t*> converter;
     const wchar_t* enmpty_str = L"";
     converter.set("");
-    EXPECT_EQ(0, ::wcslen(converter.get()));
+    EXPECT_EQ(0u, ::wcslen(converter.get()));
     converter.set(enmpty_str);
     EXPECT_EQ(enmpty_str, converter.get());
 

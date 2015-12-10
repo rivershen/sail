@@ -25,7 +25,7 @@ TEST(preprocessor_test, for_each){
         )
     };
 #undef LOCAL_APPEND
-    EXPECT_EQ(96, v.size());
+    EXPECT_EQ(96u, v.size());
     EXPECT_EQ(1, v.front());
     EXPECT_EQ(96, v.back());
 }

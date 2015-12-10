@@ -32,7 +32,7 @@ TYPED_TEST(list_ref_tests, for_each){
     });
 }
 TYPED_TEST(list_ref_tests, size){
-    EXPECT_EQ(6, this->ref.to_list().size());
+    EXPECT_EQ(6u, this->ref.to_list().size());
     EXPECT_FALSE(this->ref.to_list().empty());
 }
 

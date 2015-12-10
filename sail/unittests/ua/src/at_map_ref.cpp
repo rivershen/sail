@@ -87,15 +87,15 @@ TEST(map_ref_tests2, empty_and_size){
     std::map<std::string, int> m1;
     map_ref ref = maps::make_ref(m1);
     EXPECT_TRUE(ref.empty());
-    EXPECT_EQ(0, ref.size());
+    EXPECT_EQ(0u, ref.size());
     m1.emplace("abc", 100);
     EXPECT_FALSE(ref.empty());
-    EXPECT_EQ(1, ref.size());
+    EXPECT_EQ(1u, ref.size());
 
     Record m2;
     ref = maps::make_ref(m2);
     EXPECT_FALSE(ref.empty());
-    EXPECT_EQ(2, ref.size());
+    EXPECT_EQ(2u, ref.size());
 }
 
 

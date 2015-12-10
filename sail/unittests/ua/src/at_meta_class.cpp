@@ -91,7 +91,7 @@ TEST(meta_class_tests, FieldVisitor){
     detail::native_object_visitor visitor(fields);
     visitor.setObject(t);
     _ua_visit_native_object(t,&visitor);
-    EXPECT_EQ(23, fields.size());
+    EXPECT_EQ(23u, fields.size());
     EXPECT_EQ("b",fields[0].name);
     EXPECT_EQ(&static_meta_value::obtain<bool>(),fields[0].meta);
     EXPECT_FALSE(fields[0].is_optional);
@@ -209,7 +209,7 @@ TEST(meta_class_tests, FieldVisitor){
 
 TEST(meta_class_tests, size){
     const meta_class& meta = metas::get_meta_class<TestObject>();
-    EXPECT_EQ(23, meta.size());
+    EXPECT_EQ(23u, meta.size());
 }
 TEST(meta_class_tests, isHomogenious){
     const meta_class& meta = metas::get_meta_class<TestObject>();

@@ -35,7 +35,7 @@ struct meta_value_impl : public meta_value{
     virtual const map_accessor* to_map(const void*) const override{
         return static_map_accessor::sniff<T>();
     }
-    virtual const list_extractor* to_forward_list(const void*) const{
+    virtual const list_extractor* to_forward_list(const void*) const override{
         return static_list_accessor::sniff<T>();
     }
     virtual const list_accessor* to_list(const void*) const override{

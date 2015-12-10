@@ -49,7 +49,7 @@ TYPED_TEST(list_accessor_tests, size_of){
     typedef typename TypeParam::Type Type;
     const Type& v = TypeParam::getPopulated();
     const list_accessor& ops = TypeParam::getAccessor(v);
-    EXPECT_EQ(6, ops.size_of(&v));
+    EXPECT_EQ(6u, ops.size_of(&v));
 }
 TYPED_TEST(list_accessor_tests, get_element_at){
     typedef typename TypeParam::Type Type;

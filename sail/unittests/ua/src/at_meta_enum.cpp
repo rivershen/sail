@@ -36,7 +36,7 @@ using namespace internal2;
 using namespace sail;
 
 TEST(mete_enum_tests, Alphabet){
-    EXPECT_EQ(26, metas::get_meta_enum<Alphabet>().size());
+    EXPECT_EQ(26u, metas::get_meta_enum<Alphabet>().size());
     EXPECT_EQ("a", enums::to_string(Alphabet::a));
     EXPECT_EQ("b", enums::to_string(Alphabet::b));
     EXPECT_EQ("c", enums::to_string(Alphabet::c));
@@ -101,7 +101,7 @@ TEST(mete_enum_tests, Alphabet){
 }
 
 TEST(mete_enum_testsmete_enum_tests, Colors){
-    EXPECT_EQ(6, metas::get_meta_enum<Color>().size());
+    EXPECT_EQ(6u, metas::get_meta_enum<Color>().size());
     EXPECT_EQ("White",  enums::to_string(Color::White));
     EXPECT_EQ("Black",  enums::to_string(Color::Black));
     EXPECT_EQ("Red",  enums::to_string(Color::Red));
@@ -120,7 +120,7 @@ TEST(mete_enum_testsmete_enum_tests, Colors){
 
 
 TEST(mete_enum_tests, Abcs){
-    EXPECT_EQ(3, metas::get_meta_enum<Abc>().size());
+    EXPECT_EQ(3u, metas::get_meta_enum<Abc>().size());
     EXPECT_EQ("a",  enums::to_string(Abc::a));
     EXPECT_EQ("b",  enums::to_string(Abc::b));
     EXPECT_EQ("c",  enums::to_string(Abc::c));
