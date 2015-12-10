@@ -9,7 +9,7 @@
 #include <iostream>
 #include "examples.h"
 
-int main(int argc, const char** argv){
+int main(int /*argc*/, const char** /*argv*/){
     make_value_ref_example();
 	std::cout<<"(done)"<<std::endl;
 }

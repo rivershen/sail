@@ -120,10 +120,7 @@ struct A{
     int a;
     UA_OBJECT(A, +a);
 };
-template<typename UA_T, typename UA_VISITOR>
-inline void _ua_visit_native_object(UA_T& obj, UA_VISITOR& visitor){
-    UA_FOR_EACH(UA_VISIT_FIELD, UA_EMPTY_TOKEN, UA_EMPTY_TOKEN)
-}
+
 template<typename T>
 void func(){}
 

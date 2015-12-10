@@ -138,7 +138,7 @@ private:
     //_try_call_reserve
     //////////////////////////////////////////////////////////////////////
     template<typename T>
-    static void _try_call_reserve(T& v, size_t capacity){
+    static void _try_call_reserve(T& /*v*/, size_t /*capacity*/){
         //TODO implement
     }
 
@@ -148,7 +148,7 @@ private:
 
     //fallback
     template<typename T>
-    static bind_status _load_list(const list_extractor& extractor, const void* from, T& to,merit<0>*){
+    static bind_status _load_list(const list_extractor& /*extractor*/, const void* /*from*/, T& /*to*/,merit<0>*){
         return bind_status::INVALID_CONVERSION;
     }
 };
